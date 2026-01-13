@@ -14,6 +14,7 @@ i18n
     fallbackLng: 'en',
     debug: false,
     resources: messages,
+    returnObjects: false,
     interpolation: {
       escapeValue: false,
     },

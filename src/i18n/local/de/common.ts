@@ -30,6 +30,7 @@ const deTranslations = {
   'services.heading2': 'Lösungen für Wachstum',
   'services.description': 'Wir bieten ein vollständiges Spektrum an Digital Marketing Dienstleistungen, die darauf ausgelegt sind, Ihre Marke zu stärken, Ihr Publikum zu engagieren und messbare Ergebnisse zu erzielen.',
   'services.learnMore': 'Mehr erfahren',
+  'services.seo.title': 'SEO-Optimierung',
   'services.seo': 'SEO-Optimierung',
   'services.seo.desc': 'Dominieren Sie Suchrankings mit datengesteuerten SEO-Strategien, die messbare Ergebnisse und nachhaltiges Wachstum liefern.',
   'services.social': 'Social Media Marketing',

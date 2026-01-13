@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import i18n from '../../../i18n';
 
 interface Service {
   icon: string;
@@ -37,72 +38,81 @@ export default function ServicesSection({ onConsultationClick }: ServicesSection
     return () => observer.disconnect();
   }, []);
 
-  const services: Service[] = [
+  const services: Service[] = useMemo(() => {
+    // Get SEO title - access translation resource directly to avoid object return
+    const currentLang = i18n.language || 'en';
+    const resources = i18n.getResourceBundle(currentLang, 'translation');
+    const seoTitle = resources?.['services.seo'] && typeof resources['services.seo'] === 'string' 
+      ? resources['services.seo'] 
+      : (currentLang === 'de' ? 'SEO-Optimierung' : 'SEO Optimization');
+    
+    return [
     {
       icon: 'ri-search-line',
-      title: t('services.seo'),
-      description: t('services.seo.desc'),
+      title: seoTitle,
+      description: t('services.seo.desc') as string,
       color: 'from-cyan-500 to-teal-500',
       bgGradient: 'from-cyan-50 to-teal-50',
       slug: 'seo-optimization'
     },
     {
       icon: 'ri-google-line',
-      title: t('services.google'),
-      description: t('services.google.desc'),
+      title: t('services.google') as string,
+      description: t('services.google.desc') as string,
       color: 'from-emerald-500 to-green-600',
       bgGradient: 'from-emerald-50 to-green-50',
       slug: 'google-ads'
     },
     {
       icon: 'ri-chat-3-line',
-      title: t('services.social'),
-      description: t('services.social.desc'),
+      title: t('services.social') as string,
+      description: t('services.social.desc') as string,
       color: 'from-orange-500 to-amber-500',
       bgGradient: 'from-orange-50 to-amber-50',
       slug: 'social-media-marketing'
     },
     {
       icon: 'ri-article-line',
-      title: t('services.content'),
-      description: t('services.content.desc'),
+      title: t('services.content') as string,
+      description: t('services.content.desc') as string,
       color: 'from-sky-500 to-cyan-500',
       bgGradient: 'from-sky-50 to-cyan-50',
       slug: 'content-marketing'
     },
     {
       icon: 'ri-mail-line',
-      title: t('services.email'),
-      description: t('services.email.desc'),
+      title: t('services.email') as string,
+      description: t('services.email.desc') as string,
       color: 'from-violet-500 to-fuchsia-500',
       bgGradient: 'from-violet-50 to-fuchsia-50',
       slug: 'email-marketing'
     },
     {
       icon: 'ri-layout-line',
-      title: t('services.webdesign'),
-      description: t('services.webdesign.desc'),
+      title: t('services.webdesign') as string,
+      description: t('services.webdesign.desc') as string,
       color: 'from-teal-500 to-cyan-600',
       bgGradient: 'from-teal-50 to-cyan-50',
       slug: 'web-development'
     },
     {
       icon: 'ri-line-chart-line',
-      title: t('services.conversion'),
-      description: t('services.conversion.desc'),
+      title: t('services.conversion') as string,
+      description: t('services.conversion.desc') as string,
       color: 'from-amber-500 to-orange-600',
       bgGradient: 'from-amber-50 to-orange-50',
       slug: 'branding-design'
     },
     {
       icon: 'ri-bar-chart-line',
-      title: t('services.analytics'),
-      description: t('services.analytics.desc'),
+      title: t('services.analytics') as string,
+      description: t('services.analytics.desc') as string,
       color: 'from-rose-500 to-pink-500',
       bgGradient: 'from-rose-50 to-pink-50',
       slug: 'analytics-reporting'
     }
-  ];
+    ];
+  }, [t]);
 
   const handleServiceClick = (slug: string) => {
     navigate(`/services/${slug}`);
@@ -164,7 +174,7 @@ export default function ServicesSection({ onConsultationClick }: ServicesSection
 
                 {/* Title */}
                 <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 lg:mb-4 group-hover:text-gray-900 transition-colors duration-300 leading-tight">
-                  {service.title || 'Service'}
+                  {typeof service.title === 'string' && service.title ? service.title : 'SEO Optimization'}
                 </h3>
 
                 {/* Description */}

@@ -24,6 +24,7 @@ const enTranslations = {
   'services.heading1': 'Comprehensive Digital',
   'services.heading2': 'Marketing Solutions',
   'services.description': 'From strategy to execution, we provide end-to-end digital marketing services tailored to your business goals.',
+  'services.seo.title': 'SEO Optimization',
   'services.seo': 'SEO Optimization',
   'services.seo.desc': 'Boost your visibility in search engines with data-driven SEO strategies that deliver sustainable organic growth.',
   'services.google': 'Google Ads',
