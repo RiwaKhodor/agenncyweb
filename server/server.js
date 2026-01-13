@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 
 // Middleware
 app.use(cors());
@@ -122,11 +122,16 @@ ${message}
       `,
     };
 
-    // Send email
-    console.log('📤 Attempting to send consultation email...');
-    console.log('📤 Using password length:', smtpPass.length);
-    const info = await transporter.sendMail(mailOptions);
+    // Log submission
+    console.log('📝 Consultation form submission received:');
+    console.log('   Name:', name);
+    console.log('   Email:', email);
+    console.log('   Phone:', phone);
+    console.log('   Message:', message);
 
+    // Send email - this must succeed for form to be successful
+    console.log('📤 Attempting to send consultation email...');
+    const info = await transporter.sendMail(mailOptions);
     console.log('✅ Consultation email sent:', info.messageId);
 
     res.json({ 
@@ -205,11 +210,19 @@ ${message ? `\nMessage:\n${message}` : ''}
       `,
     };
 
-    // Send email
-    console.log('📤 Attempting to send contact email...');
-    console.log('📤 Using password length:', smtpPass.length);
-    const info = await transporter.sendMail(mailOptions);
+    // Log submission
+    console.log('📝 Contact form submission received:');
+    console.log('   Name:', name);
+    console.log('   Email:', email);
+    console.log('   Phone:', phone);
+    if (company) console.log('   Company:', company);
+    if (service) console.log('   Service:', service);
+    if (budget) console.log('   Budget:', budget);
+    if (message) console.log('   Message:', message);
 
+    // Send email - this must succeed for form to be successful
+    console.log('📤 Attempting to send contact email...');
+    const info = await transporter.sendMail(mailOptions);
     console.log('✅ Contact email sent:', info.messageId);
 
     res.json({ 
@@ -234,6 +247,21 @@ ${message ? `\nMessage:\n${message}` : ''}
   }
 });
 
+// Root route - required for Railway
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    message: 'Backend is running 🚀',
+    service: 'Agenncy API',
+    timestamp: new Date().toISOString(),
+    endpoints: {
+      health: '/api/health',
+      consultation: '/api/consultation',
+      contact: '/api/contact'
+    }
+  });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({ 
@@ -243,10 +271,11 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Start server
-const server = app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📧 Emails will be sent to: Mail@agenncy.de`);
+// Start server - bind to 0.0.0.0 for Railway
+const server = app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🌐 Accessible at: http://0.0.0.0:${PORT}`);
+  console.log(`📧 Emails will be sent to: ${process.env.EMAIL_RECIPIENT || 'Mail@agenncy.de'}`);
   console.log(`✅ Server is ready to receive requests`);
 });
 
