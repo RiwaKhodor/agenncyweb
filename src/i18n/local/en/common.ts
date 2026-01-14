@@ -18,6 +18,9 @@ const enTranslations = {
   'hero.awards': 'Awards Won',
   'hero.clients': 'Happy Clients',
   'hero.success': 'Success Rate',
+  'hero.innovative': 'Innovative Solutions',
+  'hero.trusted': 'Trusted Expertise',
+  'hero.growth': 'Growth Focused',
 
   // Services Section
   'services.badge': 'Our Services',

@@ -326,18 +326,33 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className={`lg:hidden z-50 w-10 h-10 flex items-center justify-center rounded-lg transition-colors cursor-pointer ${
-            isMobileMenuOpen ? 'text-gray-800' : (isScrolled ? 'text-gray-800' : 'text-white')
-          }`}
-        >
-          {isMobileMenuOpen ? (
-            <i className="ri-close-line text-2xl text-gray-800"></i>
-          ) : (
-            <i className="ri-menu-line text-2xl"></i>
-          )}
+        {/* Mobile Language Toggle & Menu Button */}
+        <div className="lg:hidden flex items-center gap-2 z-50">
+          {/* Mobile Language Toggle - Before Hamburger */}
+          <button
+            onClick={toggleLanguage}
+            className={`w-10 h-10 flex items-center justify-center rounded-full text-sm font-semibold transition-all cursor-pointer ${
+              isScrolled 
+                ? 'bg-[#6B7F39] text-white hover:bg-[#5a6b2f] shadow-md' 
+                : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30'
+            }`}
+          >
+            {i18n.language === 'en' ? 'DE' : 'EN'}
+          </button>
+
+          {/* Mobile Menu Button */}
+          <div
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors cursor-pointer ${
+              isMobileMenuOpen ? 'text-gray-800' : (isScrolled ? 'text-gray-800' : 'text-white')
+            }`}
+          >
+            {isMobileMenuOpen ? (
+              <i className="ri-close-line text-2xl text-gray-800"></i>
+            ) : (
+              <i className="ri-menu-line text-2xl"></i>
+            )}
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -417,7 +432,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Mobile Phone Numbers & Language */}
+              {/* Mobile Phone Numbers */}
               <div className="flex flex-col gap-4 pt-6 border-t border-gray-200">
                 <div className="text-lg font-medium text-gray-800 flex items-center gap-3">
                   <i className="ri-phone-line text-[#6B7F39]"></i>
@@ -428,13 +443,6 @@ export default function Navbar() {
                   <i className="ri-phone-line text-[#6B7F39]"></i>
                   0176 72282307
                 </div>
-                
-                <button
-                  onClick={toggleLanguage}
-                  className="px-6 py-3 bg-gray-100 text-gray-800 rounded-full text-base font-medium hover:bg-gray-200 transition-all cursor-pointer text-left"
-                >
-                  {i18n.language === 'en' ? t('nav.switchToDe') : t('nav.switchToEn')}
-                </button>
 
                 <div
                   onClick={() => handleMobileLinkClick('/contact')}

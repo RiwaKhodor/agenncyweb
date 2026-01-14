@@ -21,6 +21,9 @@ const deTranslations = {
   'hero.awards': 'Auszeichnungen gewonnen',
   'hero.clients': 'Zufriedene Kunden',
   'hero.success': 'Erfolgsquote',
+  'hero.innovative': 'Innovative Lösungen',
+  'hero.trusted': 'Vertrauenswürdige Expertise',
+  'hero.growth': 'Wachstumsorientiert',
 
   // Services
   'services.title': 'Unsere Dienstleistungen',

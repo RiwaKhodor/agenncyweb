@@ -88,7 +88,7 @@ export default function HeroSection() {
                   <i className="ri-lightbulb-flash-line text-xl lg:text-2xl text-cyan-400"></i>
                 </div>
                 <div className="text-left">
-                  <p className="text-xs lg:text-sm text-white/70">Innovative Solutions</p>
+                  <p className="text-xs lg:text-sm text-white/70">{t('hero.innovative')}</p>
                 </div>
               </div>
               <div className="hidden sm:block w-px h-12 bg-white/20"></div>
@@ -97,7 +97,7 @@ export default function HeroSection() {
                   <i className="ri-shield-check-line text-xl lg:text-2xl text-cyan-400"></i>
                 </div>
                 <div className="text-left">
-                  <p className="text-xs lg:text-sm text-white/70">Trusted Expertise</p>
+                  <p className="text-xs lg:text-sm text-white/70">{t('hero.trusted')}</p>
                 </div>
               </div>
               <div className="hidden sm:block w-px h-12 bg-white/20"></div>
@@ -106,7 +106,7 @@ export default function HeroSection() {
                   <i className="ri-rocket-line text-xl lg:text-2xl text-cyan-400"></i>
                 </div>
                 <div className="text-left">
-                  <p className="text-xs lg:text-sm text-white/70">Growth Focused</p>
+                  <p className="text-xs lg:text-sm text-white/70">{t('hero.growth')}</p>
                 </div>
               </div>
             </div>
