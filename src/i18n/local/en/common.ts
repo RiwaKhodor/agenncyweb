@@ -237,6 +237,7 @@ const enTranslations = {
   
   'serviceDetail.tools.title': 'Tools & Technologies',
   'serviceDetail.tools.subtitle': 'We work with the best',
+  'serviceDetail.tools.description': 'We use industry-leading tools and stay updated with the latest technologies to deliver the best results.',
   
   'serviceDetail.faq.title': 'Frequently Asked Questions',
   'serviceDetail.faq.subtitle': 'Everything you need to know',

@@ -25,8 +25,10 @@ export default function ContactForm() {
     setSubmitStatus('idle');
 
     try {
-      // Send to backend API - use current host with port 3001
-      const API_URL = import.meta.env.VITE_API_URL || `${window.location.protocol}//${window.location.hostname}:3001`;
+      // Send to backend API
+      // For production: Set VITE_API_URL environment variable to your backend URL
+      // For local dev: Falls back to localhost:3001
+      const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? `http://localhost:3001` : `${window.location.protocol}//${window.location.hostname}`);
       
       let response: Response;
       try {

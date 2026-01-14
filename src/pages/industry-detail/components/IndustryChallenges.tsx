@@ -37,17 +37,17 @@ export default function IndustryChallenges({ slug }: IndustryChallengesProps) {
           {industry.challenges.map((challenge, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center mb-4">
-                <i className={`${challenge.icon} text-2xl text-white`}></i>
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center mb-3 sm:mb-4 flex-shrink-0">
+                <i className={`${challenge.icon} text-xl sm:text-2xl text-white`}></i>
               </div>
 
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+              <h3 className="text-sm sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3">
                 {i18n.language === 'de' ? challenge.titleDe : challenge.title}
               </h3>
 
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 {i18n.language === 'de' ? challenge.descriptionDe : challenge.description}
               </p>
             </div>

@@ -94,13 +94,13 @@ export default function Footer() {
                 <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-cyan-500/20 to-teal-500/20">
                   <i className="ri-phone-line text-cyan-400 text-sm"></i>
                 </div>
-                <span className="text-white text-sm font-medium hidden sm:inline">030 40522266</span>
+                <span className="text-white text-sm font-medium">030 40522266</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 group">
                 <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-cyan-500/20 to-teal-500/20">
                   <i className="ri-phone-line text-cyan-400 text-sm"></i>
                 </div>
-                <span className="text-white text-sm font-medium hidden sm:inline">0176 72282307</span>
+                <span className="text-white text-sm font-medium">0176 72282307</span>
               </div>
             </div>
 

@@ -293,6 +293,7 @@ const deTranslations = {
   
   'serviceDetail.tools.title': 'Tools & Technologien',
   'serviceDetail.tools.subtitle': 'Wir arbeiten mit den Besten',
+  'serviceDetail.tools.description': 'Wir verwenden branchenführende Tools und bleiben mit den neuesten Technologien auf dem Laufenden, um die besten Ergebnisse zu erzielen.',
   
   'serviceDetail.faq.title': 'Häufig gestellte Fragen',
   'serviceDetail.faq.subtitle': 'Alles, was Sie wissen müssen',

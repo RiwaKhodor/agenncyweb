@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001; // Railway uses process.env.PORT, local dev uses 3001
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
@@ -247,21 +247,6 @@ ${message ? `\nMessage:\n${message}` : ''}
   }
 });
 
-// Root route - required for Railway
-app.get('/', (req, res) => {
-  res.json({ 
-    status: 'ok', 
-    message: 'Backend is running 🚀',
-    service: 'Agenncy API',
-    timestamp: new Date().toISOString(),
-    endpoints: {
-      health: '/api/health',
-      consultation: '/api/consultation',
-      contact: '/api/contact'
-    }
-  });
-});
-
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({ 
@@ -271,10 +256,9 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Start server - bind to 0.0.0.0 for Railway
-const server = app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🌐 Accessible at: http://0.0.0.0:${PORT}`);
+// Start server
+const server = app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log(`📧 Emails will be sent to: ${process.env.EMAIL_RECIPIENT || 'Mail@agenncy.de'}`);
   console.log(`✅ Server is ready to receive requests`);
 });

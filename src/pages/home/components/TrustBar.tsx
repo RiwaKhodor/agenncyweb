@@ -58,7 +58,7 @@ export default function TrustBar() {
           {commitments.map((commitment, index) => (
             <div
               key={index}
-              className={`group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100 ${
+              className={`group relative bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100 overflow-hidden ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -69,17 +69,17 @@ export default function TrustBar() {
               {/* Content */}
               <div className="relative z-10 text-center">
                 {/* Icon */}
-                <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-cyan-100 to-teal-100 rounded-xl mb-6 mx-auto group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                  <i className={`${commitment.icon} text-3xl bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent`}></i>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center bg-gradient-to-br from-cyan-100 to-teal-100 rounded-xl mb-4 sm:mb-6 mx-auto group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 flex-shrink-0">
+                  <i className={`${commitment.icon} text-2xl sm:text-3xl bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent`}></i>
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-600 group-hover:to-teal-600 group-hover:bg-clip-text transition-all duration-500" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                <h3 className="text-sm sm:text-base lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-600 group-hover:to-teal-600 group-hover:bg-clip-text transition-all duration-500 break-words" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   {t(commitment.titleKey)}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed break-words overflow-wrap-anywhere">
                   {t(commitment.descKey)}
                 </p>
               </div>

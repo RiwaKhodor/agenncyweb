@@ -42,8 +42,8 @@ export default function ServiceTools({ service, isGerman }: ServiceToolsProps) {
 
         {/* Additional Info */}
         <div className="mt-12 text-center">
-          <p className="text-gray-600 text-lg">
-            We use industry-leading tools and stay updated with the latest technologies to deliver the best results.
+          <p className="text-gray-600 text-base sm:text-lg">
+            {t('serviceDetail.tools.description')}
           </p>
         </div>
       </div>
