@@ -41,18 +41,28 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
       // Send to backend API - use current host with port 3001
       const API_URL = import.meta.env.VITE_API_URL || `${window.location.protocol}//${window.location.hostname}:3001`;
       
-      const response = await fetch(`${API_URL}/api/consultation`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        }),
-      });
+      let response: Response;
+      try {
+        response = await fetch(`${API_URL}/api/consultation`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+          }),
+        });
+      } catch (fetchError) {
+        // Network error - server not reachable
+        console.error('❌ Network error:', fetchError);
+        if (fetchError instanceof TypeError && (fetchError.message.includes('fetch') || fetchError.message.includes('Failed to fetch'))) {
+          throw new Error('Unable to connect to server. Please check your connection or contact us directly.');
+        }
+        throw fetchError;
+      }
 
       // Check if response is ok before parsing JSON
       if (!response.ok) {
@@ -60,14 +70,19 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
         try {
           const errorData = await response.json();
           errorMessage = errorData.error || errorData.details || errorMessage;
-        } catch (e) {
+        } catch (parseError) {
           // If JSON parsing fails, use status text
           errorMessage = `Server error: ${response.status} ${response.statusText}`;
         }
         throw new Error(errorMessage);
       }
 
-      const data = await response.json();
+      let data;
+      try {
+        data = await response.json();
+      } catch (parseError) {
+        throw new Error('Invalid response from server. Please try again.');
+      }
 
       if (!data.success) {
         throw new Error(data.error || data.details || 'Failed to send email');
@@ -82,11 +97,6 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
       }, 2000);
     } catch (error) {
       console.error('Email sending error:', error);
-      // Check if it's a network error (server not running)
-      if (error instanceof TypeError && error.message.includes('fetch')) {
-        console.error('❌ Backend server is not running or not reachable');
-        console.error('💡 Make sure the backend server is running on port 3001');
-      }
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

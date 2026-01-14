@@ -174,7 +174,9 @@ export default function ServicesSection({ onConsultationClick }: ServicesSection
 
                 {/* Title */}
                 <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 lg:mb-4 group-hover:text-gray-900 transition-colors duration-300 leading-tight">
-                  {typeof service.title === 'string' && service.title ? service.title : 'SEO Optimization'}
+                  {typeof service.title === 'string' && service.title 
+                    ? service.title 
+                    : (i18n.language === 'de' ? 'SEO-Optimierung' : 'SEO Optimization')}
                 </h3>
 
                 {/* Description */}
