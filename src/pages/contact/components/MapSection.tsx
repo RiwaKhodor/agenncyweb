@@ -7,14 +7,9 @@ export default function MapSection() {
   const { t } = useTranslation();
   const [mapMode, setMapMode] = useState<MapMode>('light');
 
-  // To update the map location from your share link (https://share.google/DQV1KOvAMCItJsvn2):
-  // 1. Open the share link in your browser
-  // 2. Click "Share" → "Embed a map" tab
-  // 3. Copy the entire src URL from the iframe code
-  // 4. Replace the mapEmbedUrl below with your new embed URL
-  // 
-  // Format should be: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3...
-  const mapEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.6489847729844!2d13.388860776907654!3d52.51628997981308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c655f20989%3A0x26bbfb4e84674c63!2sFriedrichstra%C3%9Fe%2C%20Berlin%2C%20Germany!5e0!3m2!1sen!2sus!4v1705920000000!5m2!1sen!2sus';
+  // Map location: Hünensteig 12, 12169 Berlin, Germany
+  // Share link: https://maps.app.goo.gl/hkTPicfep9C53T8f9
+  const mapEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.412400328662!2d13.340930600000002!3d52.4535583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85a98164c32f3%3A0x8001fd9f1dc8527d!2sH%C3%BCnensteig%2012%2C%2012169%20Berlin%2C%20Germany!5e0!3m2!1sen!2slb!4v1769273028304!5m2!1sen!2slb';
 
   const getMapUrl = (mode: MapMode) => {
     // Return the clean map embed URL - same for both light and dark modes

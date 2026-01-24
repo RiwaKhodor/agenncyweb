@@ -12,14 +12,6 @@ export default function Footer() {
     setEmail('');
   };
 
-  const quickLinks = [
-    { name: t('nav.services'), href: '#services' },
-    { name: t('nav.industries'), href: '#industries' },
-    { name: t('footer.caseStudies'), href: '#work' },
-    { name: t('nav.blog'), href: '/blog' },
-    { name: t('footer.careers'), href: '#' }
-  ];
-
   return (
     <footer className="bg-[#1A2B4A] mx-3 sm:mx-4 lg:mx-6 mb-3 sm:mb-4 lg:mb-6 rounded-2xl sm:rounded-3xl overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-10 sm:py-12 lg:py-16">
@@ -49,15 +41,37 @@ export default function Footer() {
           <div className="md:col-span-3">
             <h4 className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 sm:mb-6">{t('footer.quicklinks')}</h4>
             <div className="space-y-3 sm:space-y-4">
-              {quickLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="block text-sm sm:text-base text-gray-400 hover:text-white transition-colors cursor-pointer"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {/* Home */}
+              <div
+                onClick={() => window.location.href = '/'}
+                className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors cursor-pointer"
+              >
+                {t('nav.home')}
+              </div>
+
+              {/* About */}
+              <div
+                onClick={() => window.location.href = '/about'}
+                className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors cursor-pointer"
+              >
+                {t('nav.about')}
+              </div>
+
+              {/* Blog */}
+              <div
+                onClick={() => window.location.href = '/blog'}
+                className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors cursor-pointer"
+              >
+                {t('nav.blog')}
+              </div>
+
+              {/* Contact */}
+              <div
+                onClick={() => window.location.href = '/contact'}
+                className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors cursor-pointer"
+              >
+                {t('nav.contact')}
+              </div>
             </div>
           </div>
 
@@ -102,12 +116,18 @@ export default function Footer() {
 
             {/* Legal Links */}
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-              <a href="/impressum" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm cursor-pointer whitespace-nowrap">
+              <div
+                onClick={() => window.location.href = '/impressum'}
+                className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm cursor-pointer whitespace-nowrap"
+              >
                 {t('footer.imprint')}
-              </a>
-              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm cursor-pointer whitespace-nowrap">
+              </div>
+              <div
+                onClick={() => window.location.href = '/privacy'}
+                className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm cursor-pointer whitespace-nowrap"
+              >
                 {t('footer.privacy')}
-              </a>
+              </div>
             </div>
           </div>
         </div>
