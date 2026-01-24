@@ -202,7 +202,7 @@ const enTranslations = {
   'footer.quicklinks': 'Quick Links',
   'footer.visit': 'Visit Us',
   'footer.office': 'Berlin Office',
-  'footer.address': 'Friedrichstraße 123, 10117 Berlin, Germany',
+  'footer.address': 'Hünensteig 12  12169 Berlin',
   'footer.hours': 'Business Hours',
   'footer.hours.time': 'Mon-Fri: 9:00-18:00',
   'footer.rights': 'All rights reserved.',
@@ -293,7 +293,7 @@ const enTranslations = {
   
   'industry.cta.heading': 'Ready to Transform Your Business?',
   'industry.cta.description': 'Let\'s discuss how our industry expertise can help you achieve your goals',
-  'industry.cta.button': 'Schedule Consultation',
+  'industry.cta.button': 'Get Your Consultation',
   'industry.cta.call': 'Or call us',
 
   // Contact Page
@@ -328,6 +328,11 @@ const enTranslations = {
   'contact.info.assistance': 'Need Immediate Assistance?',
   'contact.info.assistanceDesc': 'Our team is available during business hours to answer your questions and provide support.',
   'contact.info.callNow': 'Call Now',
+  'contact.info.why.title': 'Why Choose Agenncy?',
+  'contact.info.why.description': 'We combine strategic thinking with creative execution to deliver measurable results that drive your business forward.',
+  'contact.info.why.point1': 'Expert team with proven track record',
+  'contact.info.why.point2': 'Transparent communication and reporting',
+  'contact.info.why.point3': 'Customized strategies for your business',
 
   // About Page
   'about.hero.badge': 'About Agenncy',

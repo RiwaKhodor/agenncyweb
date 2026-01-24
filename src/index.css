@@ -37,6 +37,13 @@ html, body {
   animation: scaleIn 0.3s ease-out;
 }
 
+/* Fix h2 elements being cut off from below */
+h2 {
+  line-height: 1.3 !important;
+  padding-bottom: 0.15em !important;
+  overflow: visible !important;
+}
+
 @layer utilities {
   @keyframes float-slow {
     0%, 100% {

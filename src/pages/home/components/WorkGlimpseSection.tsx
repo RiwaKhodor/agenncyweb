@@ -53,7 +53,7 @@ export default function WorkGlimpseSection() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
+    <section id="work" ref={sectionRef} className="py-16 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-100/30 to-teal-100/30 rounded-full blur-3xl"></div>

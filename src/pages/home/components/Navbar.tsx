@@ -158,7 +158,7 @@ export default function Navbar() {
                 {/* Header */}
                 <div className="mb-3 pb-3 border-b border-gray-100">
                   <h3 className="text-base font-bold text-gray-900 flex items-center gap-2">
-                    <i className="ri-star-line text-[#6B7F39]"></i>
+                    <i className="ri-star-line text-cyan-700"></i>
                     {t('nav.services')}
                   </h3>
                 </div>
@@ -172,26 +172,26 @@ export default function Navbar() {
                         setServicesDropdownOpen(false);
                         window.location.href = `/services/${service.slug}`;
                       }}
-                      className="group relative flex items-start gap-3 p-3 rounded-lg hover:bg-gradient-to-br hover:from-[#6B7F39]/5 hover:to-[#6B7F39]/10 transition-all border border-transparent hover:border-[#6B7F39]/20 hover:shadow-sm cursor-pointer"
+                      className="group relative flex items-start gap-3 p-3 rounded-lg hover:bg-gradient-to-br hover:from-cyan-100 hover:to-teal-100 transition-all border border-transparent hover:border-cyan-300 hover:shadow-sm cursor-pointer"
                     >
                       {/* Icon with animated background */}
                       <div className="relative flex-shrink-0">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#6B7F39]/10 to-[#6B7F39]/5 flex items-center justify-center group-hover:from-[#6B7F39] group-hover:to-[#5a6b2f] transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-                          <i className={`${service.icon} text-[#6B7F39] group-hover:text-white text-base transition-all duration-300`}></i>
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-200 to-teal-200 flex items-center justify-center group-hover:from-cyan-600 group-hover:to-teal-600 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                          <i className={`${service.icon} text-cyan-700 group-hover:text-white text-base transition-all duration-300`}></i>
                         </div>
                         {/* Animated ring */}
-                        <div className="absolute inset-0 rounded-lg border-2 border-[#6B7F39]/20 scale-0 group-hover:scale-125 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                        <div className="absolute inset-0 rounded-lg border-2 border-cyan-300 scale-0 group-hover:scale-125 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                       </div>
                       
                       {/* Content */}
                       <div className="flex-1 min-w-0">
-                        <div className="text-xs font-bold text-gray-900 group-hover:text-[#6B7F39] transition-colors">
+                        <div className="text-xs font-bold text-gray-900 group-hover:text-cyan-700 transition-colors">
                           {i18n.language === 'de' ? service.titleDe : service.title}
                         </div>
                       </div>
                       
                       {/* Arrow indicator */}
-                      <i className="ri-arrow-right-s-line text-gray-300 group-hover:text-[#6B7F39] group-hover:translate-x-1 transition-all text-base flex-shrink-0"></i>
+                      <i className="ri-arrow-right-s-line text-gray-300 group-hover:text-cyan-700 group-hover:translate-x-1 transition-all text-base flex-shrink-0"></i>
                     </div>
                   ))}
                 </div>
@@ -219,7 +219,7 @@ export default function Navbar() {
                 {/* Header */}
                 <div className="mb-3 pb-3 border-b border-gray-100">
                   <h3 className="text-base font-bold text-gray-900 flex items-center gap-2">
-                    <i className="ri-building-line text-[#6B7F39]"></i>
+                    <i className="ri-building-line text-cyan-700"></i>
                     {t('nav.industries')}
                   </h3>
                 </div>
@@ -233,26 +233,26 @@ export default function Navbar() {
                         setIndustriesDropdownOpen(false);
                         window.location.href = `/industries/${industry.slug}`;
                       }}
-                      className="group relative flex items-start gap-3 p-3 rounded-lg hover:bg-gradient-to-br hover:from-[#6B7F39]/5 hover:to-[#6B7F39]/10 transition-all border border-transparent hover:border-[#6B7F39]/20 hover:shadow-sm cursor-pointer text-left"
+                      className="group relative flex items-start gap-3 p-3 rounded-lg hover:bg-gradient-to-br hover:from-cyan-100 hover:to-teal-100 transition-all border border-transparent hover:border-cyan-300 hover:shadow-sm cursor-pointer text-left"
                     >
                       {/* Icon with animated background */}
                       <div className="relative flex-shrink-0">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#6B7F39]/10 to-[#6B7F39]/5 flex items-center justify-center group-hover:from-[#6B7F39] group-hover:to-[#5a6b2f] transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-                          <i className={`${industry.icon} text-[#6B7F39] group-hover:text-white text-base transition-all duration-300`}></i>
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-200 to-teal-200 flex items-center justify-center group-hover:from-cyan-600 group-hover:to-teal-600 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                          <i className={`${industry.icon} text-cyan-700 group-hover:text-white text-base transition-all duration-300`}></i>
                         </div>
                         {/* Animated ring */}
-                        <div className="absolute inset-0 rounded-lg border-2 border-[#6B7F39]/20 scale-0 group-hover:scale-125 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                        <div className="absolute inset-0 rounded-lg border-2 border-cyan-300 scale-0 group-hover:scale-125 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                       </div>
                       
                       {/* Content */}
                       <div className="flex-1 min-w-0">
-                        <div className="text-xs font-bold text-gray-900 group-hover:text-[#6B7F39] transition-colors">
+                        <div className="text-xs font-bold text-gray-900 group-hover:text-cyan-700 transition-colors">
                           {industry.name}
                         </div>
                       </div>
                       
                       {/* Arrow indicator */}
-                      <i className="ri-arrow-right-s-line text-gray-300 group-hover:text-[#6B7F39] group-hover:translate-x-1 transition-all text-base flex-shrink-0"></i>
+                      <i className="ri-arrow-right-s-line text-gray-300 group-hover:text-cyan-700 group-hover:translate-x-1 transition-all text-base flex-shrink-0"></i>
                     </div>
                   ))}
                 </div>
@@ -290,21 +290,14 @@ export default function Navbar() {
 
         {/* Desktop Phone Numbers, Language & CTA */}
         <div className="hidden lg:flex items-center gap-3 xl:gap-4 2xl:gap-6 flex-shrink-0">
-          <div
-            className={`text-xs xl:text-sm font-medium whitespace-nowrap hidden xl:inline-block ${
+          <a
+            href="tel:+493030135316"
+            className={`text-xs xl:text-sm font-medium whitespace-nowrap hidden xl:inline-block hover:opacity-80 transition-opacity cursor-pointer ${
               isScrolled ? 'text-gray-800' : 'text-white'
             }`}
           >
-            030 40522266
-          </div>
-          
-          <div
-            className={`text-xs xl:text-sm font-medium whitespace-nowrap hidden 2xl:inline-block ${
-              isScrolled ? 'text-gray-800' : 'text-white'
-            }`}
-          >
-            0176 72282307
-          </div>
+            030 30135316
+          </a>
           
           {/* Language Switcher */}
           <button
@@ -434,15 +427,10 @@ export default function Navbar() {
 
               {/* Mobile Phone Numbers */}
               <div className="flex flex-col gap-4 pt-6 border-t border-gray-200">
-                <div className="text-lg font-medium text-gray-800 flex items-center gap-3">
+                <a href="tel:+493030135316" className="text-lg font-medium text-gray-800 flex items-center gap-3 hover:text-[#6B7F39] transition-colors cursor-pointer">
                   <i className="ri-phone-line text-[#6B7F39]"></i>
-                  030 40522266
-                </div>
-                
-                <div className="text-lg font-medium text-gray-800 flex items-center gap-3">
-                  <i className="ri-phone-line text-[#6B7F39]"></i>
-                  0176 72282307
-                </div>
+                  030 30135316
+                </a>
 
                 <div
                   onClick={() => handleMobileLinkClick('/contact')}

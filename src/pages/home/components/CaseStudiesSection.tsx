@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import ConsultationPopup from '../../../components/ConsultationPopup';
 
@@ -74,7 +73,9 @@ export default function CaseStudiesSection() {
         { icon: 'ri-percent-line', value: '42%', label: 'Conversion Rate' },
         { icon: 'ri-time-line', value: '-35%', label: 'Cost per Lead' }
       ],
-      image: 'https://readdy.ai/api/search-image?query=Professional%20financial%20services%20office%20modern%20banking%20environment%20business%20meeting%20digital%20finance%20technology%20professional%20corporate%20photography%20clean%20contemporary%20design&width=500&height=350&seq=case-finance-agenncy&orientation=landscape'
+      image: isGerman
+        ? 'https://readdy.ai/api/search-image?query=Professionelle%20Finanzdienstleistungen%20Büro%20moderne%20Bankumgebung%20Business-Meeting%20digitale%20Finanztechnologie%20professionelle%20Corporate-Fotografie%20sauberes%20zeitgenössisches%20Design&width=500&height=350&seq=case-finance-agenncy&orientation=landscape'
+        : 'https://readdy.ai/api/search-image?query=Professional%20financial%20services%20office%20modern%20banking%20environment%20business%20meeting%20digital%20finance%20technology%20professional%20corporate%20photography%20clean%20contemporary%20design&width=500&height=350&seq=case-finance-agenncy&orientation=landscape'
     }
   ];
 

@@ -186,7 +186,7 @@ export default function IndustriesSection() {
 
           {/* Bottom CTA */}
           <div className="text-center mt-12 sm:mt-16 px-4">
-            <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">{t('industries.custom')}</p>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6">{t('industries.custom')}</p>
             <button 
               onClick={() => setIsPopupOpen(true)}
               className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white text-sm sm:text-base font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap cursor-pointer"

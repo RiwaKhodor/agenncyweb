@@ -14,7 +14,7 @@ export default function ServiceProcess({ service, isGerman }: ServiceProcessProp
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <div className="inline-block px-4 py-2 bg-cyan-50 rounded-full mb-6">
-            <span className="text-cyan-600 text-sm font-semibold uppercase tracking-wider">
+            <span className="text-cyan-600 text-base sm:text-lg font-semibold uppercase tracking-wider">
               {t('serviceDetail.process.subtitle')}
             </span>
           </div>

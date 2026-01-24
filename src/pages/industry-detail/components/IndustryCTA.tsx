@@ -49,12 +49,12 @@ export default function IndustryCTA({ slug }: IndustryCTAProps) {
 
           {/* Heading */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Ready to Transform Your Business?
+            {t('industry.cta.heading')}
           </h2>
 
           {/* Description */}
           <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Let's discuss how our industry expertise can help you achieve your goals
+            {t('industry.cta.description')}
           </p>
 
           {/* CTA Button */}
@@ -62,7 +62,7 @@ export default function IndustryCTA({ slug }: IndustryCTAProps) {
             onClick={() => setIsPopupOpen(true)}
             className="inline-flex items-center gap-3 px-8 sm:px-10 lg:px-12 py-4 sm:py-5 bg-white text-gray-900 rounded-full text-base sm:text-lg font-bold hover:bg-gray-100 hover:shadow-2xl transition-all hover:scale-105 whitespace-nowrap cursor-pointer"
           >
-            <span>Get Your Consultation</span>
+            <span>{t('industry.cta.button')}</span>
             <i className="ri-arrow-right-line text-xl sm:text-2xl"></i>
           </button>
 
@@ -72,15 +72,10 @@ export default function IndustryCTA({ slug }: IndustryCTAProps) {
               {t('industry.cta.orCall')}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-              <div className="text-white font-bold text-lg sm:text-xl flex items-center gap-2">
+              <a href="tel:+493030135316" className="text-white font-bold text-lg sm:text-xl flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer">
                 <i className="ri-phone-fill"></i>
-                030 40522266
-              </div>
-              <span className="hidden sm:inline text-white/40">|</span>
-              <div className="text-white font-bold text-lg sm:text-xl flex items-center gap-2">
-                <i className="ri-phone-fill"></i>
-                0176 72282307
-              </div>
+                030 30135316
+              </a>
             </div>
           </div>
         </div>

@@ -57,9 +57,9 @@ export default function ContactCTA() {
 
             <p className="text-white/80 text-sm sm:text-base lg:text-lg px-4">
               {t('contact.call')}{' '}
-              <span className="font-bold">
-                030 40522266
-              </span>
+              <a href="tel:+493030135316" className="font-bold hover:text-white transition-colors cursor-pointer">
+                030 30135316
+              </a>
             </p>
           </div>
         </div>

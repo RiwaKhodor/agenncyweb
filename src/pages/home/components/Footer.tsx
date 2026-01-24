@@ -15,10 +15,9 @@ export default function Footer() {
   const quickLinks = [
     { name: t('nav.services'), href: '#services' },
     { name: t('nav.industries'), href: '#industries' },
-    { name: t('footer.caseStudies'), href: '#' },
-    { name: t('nav.blog'), href: '#blog' },
-    { name: t('footer.careers'), href: '#' },
-    { name: t('footer.privacy'), href: '#' }
+    { name: t('footer.caseStudies'), href: '#work' },
+    { name: t('nav.blog'), href: '/blog' },
+    { name: t('footer.careers'), href: '#' }
   ];
 
   return (
@@ -35,12 +34,13 @@ export default function Footer() {
               {t('footer.brand.mission')}
             </p>
             <div className="flex items-center gap-3 sm:gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-teal-500">
-                <i className="ri-handshake-line text-white text-xl"></i>
-              </div>
+              <img 
+                src="/google-partner-badge.svg" 
+                alt="Google Partner" 
+                className="h-12 sm:h-14 w-auto"
+              />
               <div>
-                <p className="text-white font-bold text-base sm:text-lg">Trusted Partner</p>
-                <p className="text-gray-400 text-xs sm:text-sm">Successful Projects</p>
+                <p className="text-white font-bold text-base sm:text-lg">Google Partner</p>
               </div>
             </div>
           </div>
@@ -90,18 +90,12 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
             {/* Quick Contact */}
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 group">
+              <a href="tel:+493030135316" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 group hover:bg-white/10 transition-colors cursor-pointer">
                 <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-cyan-500/20 to-teal-500/20">
                   <i className="ri-phone-line text-cyan-400 text-sm"></i>
                 </div>
-                <span className="text-white text-sm font-medium">030 40522266</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 group">
-                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-cyan-500/20 to-teal-500/20">
-                  <i className="ri-phone-line text-cyan-400 text-sm"></i>
-                </div>
-                <span className="text-white text-sm font-medium">0176 72282307</span>
-              </div>
+                <span className="text-white text-sm font-medium">030 30135316</span>
+              </a>
             </div>
 
           
@@ -114,8 +108,6 @@ export default function Footer() {
               <a href="/privacy" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm cursor-pointer whitespace-nowrap">
                 {t('footer.privacy')}
               </a>
-              
-             
             </div>
           </div>
         </div>

@@ -253,7 +253,7 @@ const deTranslations = {
   'footer.awards.desc': 'Branchenanerkennung',
   'footer.visit': 'Besuchen Sie uns',
   'footer.office': 'Berlin Büro',
-  'footer.address': 'Friedrichstraße 123, 10117 Berlin, Deutschland',
+  'footer.address': 'Hünensteig 12  12169 Berlin',
   'footer.hours': 'Geschäftszeiten',
   'footer.hours.time': 'Mo - Fr: 9:00 - 18:00',
   'footer.rights': 'Alle Rechte vorbehalten',
@@ -373,6 +373,11 @@ const deTranslations = {
   'contact.info.assistance': 'Benötigen Sie sofortige Unterstützung?',
   'contact.info.assistanceDesc': 'Unser Team ist während der Geschäftszeiten verfügbar, um Ihre Fragen zu beantworten und Unterstützung zu bieten.',
   'contact.info.callNow': 'Jetzt anrufen',
+  'contact.info.why.title': 'Warum Agenncy wählen?',
+  'contact.info.why.description': 'Wir kombinieren strategisches Denken mit kreativer Umsetzung, um messbare Ergebnisse zu liefern, die Ihr Geschäft voranbringen.',
+  'contact.info.why.point1': 'Expertenteam mit nachgewiesener Erfolgsbilanz',
+  'contact.info.why.point2': 'Transparente Kommunikation und Berichterstattung',
+  'contact.info.why.point3': 'Maßgeschneiderte Strategien für Ihr Unternehmen',
 
   // About Page
   'about.hero.badge': 'Über Agenncy',

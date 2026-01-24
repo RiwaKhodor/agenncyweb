@@ -66,13 +66,13 @@ export default function ServiceFAQ({ service, isGerman }: ServiceFAQProps) {
         {/* Contact CTA */}
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-6 text-lg">
-            Still have questions? We're here to help!
+            {t('faq.stillHaveQuestions')}
           </p>
           <a
             href="#contact"
             className="inline-flex items-center justify-center px-8 py-4 bg-[#6B7F39] text-white rounded-full text-base font-semibold hover:bg-[#5a6b2f] transition-all shadow-lg hover:shadow-xl cursor-pointer whitespace-nowrap"
           >
-            Contact Our Team
+            {t('faq.contactTeam')}
             <i className="ri-message-3-line ml-2"></i>
           </a>
         </div>

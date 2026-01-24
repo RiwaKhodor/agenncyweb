@@ -47,15 +47,10 @@ export default function ServiceCTA({ service, isGerman, onOpenPopup }: ServiceCT
         {/* Contact Info */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-300">
           <span className="text-base">{t('serviceDetail.cta.call')}</span>
-          <div className="text-lg font-bold text-white flex items-center gap-2">
+          <a href="tel:+493030135316" className="text-lg font-bold text-white flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer">
             <i className="ri-phone-line"></i>
-            030 40522266
-          </div>
-          <span className="hidden sm:inline text-gray-500">|</span>
-          <div className="text-lg font-bold text-white flex items-center gap-2">
-            <i className="ri-phone-line"></i>
-            0176 72282307
-          </div>
+            030 30135316
+          </a>
         </div>
       </div>
     </section>

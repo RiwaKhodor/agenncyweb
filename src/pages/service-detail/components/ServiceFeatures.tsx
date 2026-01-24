@@ -44,7 +44,7 @@ export default function ServiceFeatures({ service, isGerman }: ServiceFeaturesPr
 
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-6">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6">
             {t('serviceDetail.features.customize')}
           </p>
           <a

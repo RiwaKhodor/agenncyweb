@@ -7,14 +7,14 @@ export default function ContactInfo() {
     {
       icon: 'ri-map-pin-line',
       title: t('contact.info.visit'),
-      details: ['Friedrichstraße 123', '10117 Berlin, Germany'],
+      details: ['Hünensteig 12', '12169 Berlin'],
       link: '#map'
     },
     {
       icon: 'ri-phone-line',
       title: t('contact.info.call'),
-      details: ['030 40522266', '0176 72282307'],
-      link: null
+      details: ['030 30135316'],
+      link: 'tel:+493030135316'
     },
     {
       icon: 'ri-mail-line',
@@ -48,7 +48,7 @@ export default function ContactInfo() {
                 <h3 className="font-bold text-gray-900 mb-2">{method.title}</h3>
                 {method.details.map((detail, idx) => (
                   <p key={idx} className="text-gray-600">
-                    {method.link && idx === 0 ? (
+                    {method.link ? (
                       <a href={method.link} className="hover:text-[#6B7F39] transition-colors">
                         {detail}
                       </a>
@@ -69,23 +69,23 @@ export default function ContactInfo() {
           <i className="ri-star-line text-2xl text-[#6B7F39]"></i>
         </div>
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Why Choose Agenncy?
+          {t('contact.info.why.title')}
         </h2>
         <p className="text-gray-600 mb-6 leading-relaxed">
-          We combine strategic thinking with creative execution to deliver measurable results that drive your business forward.
+          {t('contact.info.why.description')}
         </p>
         <div className="space-y-3">
           <div className="flex items-start gap-3">
             <i className="ri-checkbox-circle-fill text-[#6B7F39] text-xl mt-0.5"></i>
-            <p className="text-gray-700">Expert team with proven track record</p>
+            <p className="text-gray-700">{t('contact.info.why.point1')}</p>
           </div>
           <div className="flex items-start gap-3">
             <i className="ri-checkbox-circle-fill text-[#6B7F39] text-xl mt-0.5"></i>
-            <p className="text-gray-700">Transparent communication and reporting</p>
+            <p className="text-gray-700">{t('contact.info.why.point2')}</p>
           </div>
           <div className="flex items-start gap-3">
             <i className="ri-checkbox-circle-fill text-[#6B7F39] text-xl mt-0.5"></i>
-            <p className="text-gray-700">Customized strategies for your business</p>
+            <p className="text-gray-700">{t('contact.info.why.point3')}</p>
           </div>
         </div>
       </div>
@@ -108,15 +108,10 @@ export default function ContactInfo() {
             {t('contact.info.assistanceDesc')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <div className="flex items-center gap-2 text-white font-semibold">
+            <a href="tel:+493030135316" className="flex items-center gap-2 text-white font-semibold hover:text-cyan-400 transition-colors cursor-pointer">
               <i className="ri-phone-line"></i>
-              <span>030 40522266</span>
-            </div>
-            <span className="hidden sm:inline text-white/40">|</span>
-            <div className="flex items-center gap-2 text-white font-semibold">
-              <i className="ri-phone-line"></i>
-              <span>0176 72282307</span>
-            </div>
+              <span>030 30135316</span>
+            </a>
           </div>
         </div>
       </div>

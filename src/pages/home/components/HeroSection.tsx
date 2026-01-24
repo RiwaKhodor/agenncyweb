@@ -50,7 +50,7 @@ export default function HeroSection() {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white mb-2 tracking-tight leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 {t('hero.title1')}
               </h1>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent mb-2 tracking-tight leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent mb-2 tracking-tight overflow-visible" style={{ fontFamily: 'Poppins, sans-serif', lineHeight: '1.3', paddingBottom: '0.15em' }}>
                 {t('hero.title2')}
               </h1>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-tight leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>

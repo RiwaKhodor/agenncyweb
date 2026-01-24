@@ -54,10 +54,10 @@ export default function ContactHero() {
 
           {/* Quick Contact Options */}
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <div className="flex items-center gap-3 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full">
+            <a href="tel:+493030135316" className="flex items-center gap-3 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-colors cursor-pointer">
               <i className="ri-phone-line text-[#6B7F39]"></i>
-              <span className="font-medium text-gray-800">030 40522266</span>
-            </div>
+              <span className="font-medium text-gray-800">030 30135316</span>
+            </a>
             <a
               href="mailto:mail@agenncy.de"
               className="flex items-center gap-3 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-colors"

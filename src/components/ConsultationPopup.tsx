@@ -252,18 +252,12 @@ export default function ConsultationPopup({ isOpen, onClose }: ConsultationPopup
           <div className="mt-8 p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl border-2 border-gray-200">
             <h3 className="text-sm font-bold text-gray-700 mb-4 uppercase tracking-wider">{t('popup.contact.title')}</h3>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-gray-700 group">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white">
+              <a href="tel:+493030135316" className="flex items-center gap-3 text-gray-700 group hover:text-cyan-600 transition-colors cursor-pointer">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white group-hover:bg-cyan-50 transition-all">
                   <i className="ri-phone-fill text-cyan-600 text-lg"></i>
                 </div>
-                <span className="font-semibold">030 40522266</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-700 group">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white">
-                  <i className="ri-phone-fill text-cyan-600 text-lg"></i>
-                </div>
-                <span className="font-semibold">0176 72282307</span>
-              </div>
+                <span className="font-semibold">030 30135316</span>
+              </a>
               <a href="mailto:mail@agenncy.de" className="flex items-center gap-3 text-gray-700 hover:text-cyan-600 transition-colors group cursor-pointer">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white group-hover:bg-cyan-50 transition-all">
                   <i className="ri-mail-fill text-cyan-600 text-lg"></i>
